@@ -5,7 +5,7 @@ const expressApp = express()
 
 const bot = new Telegraf(process.env.TELEGRAM_API_TOKEN  || process.env.BOT_TOKEN || '1032944878:AAHCBWU5qGcNmqC6Jb6cn84dtvvo4qAV_Gs')
 expressApp.use(bot.webhookCallback('/webhooks/telegram'))
-bot.telegram.setWebhook('https://gym-telegram-bot.herokuapp.com//webhooks/telegram')
+bot.telegram.setWebhook('https://gym-telegram-bot.herokuapp.com/webhooks/telegram')
 
 const port = process.env.PORT || 3000
 
